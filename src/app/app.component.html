@@ -1,0 +1,272 @@
+<header class="header">
+  <div class="container">
+    <a class="logo" href="#"><img src="assets/images/logo.png" alt="Logo"></a>
+    <div class="burger" id="burger">
+      <svg id="Layer_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="m464.883 64.267h-417.766c-25.98 0-47.117 21.136-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.013-21.137-47.149-47.117-47.149z" />
+        <path
+          d="m464.883 208.867h-417.766c-25.98 0-47.117 21.136-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.013-21.137-47.149-47.117-47.149z" />
+        <path
+          d="m464.883 353.467h-417.766c-25.98 0-47.117 21.137-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.012-21.137-47.149-47.117-47.149z" />
+      </svg>
+    </div>
+    <nav class="menu" id="menu">
+      <div class="close">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+          <g>
+            <g>
+              <path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+			c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+			c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+			L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+			c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+			c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+			c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z" />
+            </g>
+          </g>
+        </svg>
+      </div>
+      <ul>
+        <li class="menu-item">
+          <a href="javascript:void(0)" (click)="scrollTo(productsSection)">Пироженки</a>
+        </li>
+        <li class="menu-item">
+          <a href="javascript:void(0)" (click)="scrollTo(aboutSection)">О нас</a>
+        </li>
+        <li class="menu-item">
+          <a href="javascript:void(0)" (click)="scrollTo(orderSection)">Оформить заказ</a>
+        </li>
+      </ul>
+    </nav>
+    <a class="contact" [href]="'tel:' + phoneNumber">{{phoneNumber}}</a>
+  </div>
+</header>
+
+<section class="main">
+  <div class="container">
+    <div class="main-info">
+      <h1>Мягкие французские пироженки Macaroons</h1>
+      <div class="main-text">
+        Побалуйте себя и своих близких самыми вкусными и ароматными домашними пироженками Macaroon
+      </div>
+      <div class="main-action">
+        <button class="btn" (click)="scrollTo(productsSection)">Выбрать макарун</button>
+      </div>
+    </div>
+
+
+    <div class="main-image">
+      <img src="assets/images/Macaroon.png" alt="Macaroon">
+    </div>
+  </div>
+</section>
+
+<section class="about" #aboutSection>
+  <div class="container">
+    <div class="about-title">
+      <h2>Мы печём для вас вкуснейшие макаруны уже более 10 лет</h2>
+      <div class="about-text">
+        Все пироженки мы готовим только из натуральных и качественных продуктов, без консервантов,
+        ароматизаторов, красителей. Используем в приготовлении сливочное масло 82,5%, без дрожжей,
+        маргарина, разрыхлителей и улучшителей муки.
+      </div>
+    </div>
+    <div class="about-image">
+      <img src="assets/images/pink macaroon.png" alt="Pink macaroon">
+    </div>
+  </div>
+</section>
+
+<section class="advantages">
+  <div class="container">
+    <div class="advantage" *ngFor="let advantage of advantages; let i = index">
+      <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 74" width="72" height="74">
+        <title>Эллипс 2</title>
+        <style>
+          .s0 {
+            fill: #821328
+          }
+        </style>
+        <path id="Эллипс 2" fill-rule="evenodd" class="s0"
+          d="m36 2c19.3 0 35 15.7 35 35 0 19.3-15.7 35-35 35-19.3 0-35-15.7-35-35 0-19.3 15.7-35 35-35z" />
+      </svg>
+      <div class="advantage-number">{{ i + 1}}</div>
+      <div class="advantage-title">{{ advantage.title}}</div>
+      <div class="advantage-text">{{advantage.description}}
+        <!-- Мы честно готовим макаруны только из натуральных и качественных продуктов. Мы не используем
+        консерванты, ароматизаторы и красители. -->
+      </div>
+    </div>
+    <!-- <div class="advantage">
+      <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 74" width="72" height="74">
+        <title>Эллипс 2</title>
+        <style>
+          .s0 {
+            fill: #821328
+          }
+        </style>
+        <path id="Эллипс 2" fill-rule="evenodd" class="s0"
+          d="m36 2c19.3 0 35 15.7 35 35 0 19.3-15.7 35-35 35-19.3 0-35-15.7-35-35 0-19.3 15.7-35 35-35z" />
+      </svg>
+      <div class="advantage-number">2</div>
+      <div class="advantage-title">Много вкусов</div>
+      <div class="advantage-text">
+        Наша задача – предоставить вам широкое разнобразие вкусов. Вы удивитесь, но у нас более 70 вкусов
+        пироженок.
+      </div>
+    </div>
+    <div class="advantage">
+      <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 74" width="72" height="74">
+        <title>Эллипс 2</title>
+        <style>
+          .s0 {
+            fill: #821328
+          }
+        </style>
+        <path id="Эллипс 2" fill-rule="evenodd" class="s0"
+          d="m36 2c19.3 0 35 15.7 35 35 0 19.3-15.7 35-35 35-19.3 0-35-15.7-35-35 0-19.3 15.7-35 35-35z" />
+      </svg>
+      <div class="advantage-number">3</div>
+      <div class="advantage-title">Бисквитное тесто</div>
+      <div class="advantage-text">
+        Все пирожные готовятся на бисквитном тесте с качественным сливочным маслом 82,5%. В составе нет
+        маргарина и дрожжей!
+      </div>
+    </div>
+    <div class="advantage">
+      <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 74" width="72" height="74">
+        <title>Эллипс 2</title>
+        <style>
+          .s0 {
+            fill: #821328
+          }
+        </style>
+        <path id="Эллипс 2" fill-rule="evenodd" class="s0"
+          d="m36 2c19.3 0 35 15.7 35 35 0 19.3-15.7 35-35 35-19.3 0-35-15.7-35-35 0-19.3 15.7-35 35-35z" />
+      </svg>
+      <div class="advantage-number">4</div>
+      <div class="advantage-title">Честный продукт</div>
+      <div class="advantage-text">
+        Вкус, качество и безопасность наших пирогов подтверждена декларацией о соответствии, которую мы
+        получили 22.06.2016 г.
+      </div> -->
+    <!-- </div> -->
+  </div>
+</section>
+
+<section class="products" #productsSection>
+  <div class="products-title">Выберите свой макарун</div>
+  <div class="container">
+    <div class="product" *ngFor="let product of products">
+      <div class="product-image">
+        <img [src]="'assets/images/' + product.img" [alt]="product.title">
+      </div>
+      <div class="product-name">{{product.title}}</div>
+      <div class="product-quantity">
+        <div class="product-quantity-price">
+          <p>1 шт.</p>
+          <p>{{product.price}} руб.</p>
+        </div>
+        <button class="btn product-btn" (click)="selectProduct(product.title)">Заказать</button>
+      </div>
+    </div>
+    <!-- <div class="product">
+      <div class="product-image">
+        <img src="assets/images/yellowM.png" alt="Yellow macaroon">
+      </div>
+      <div class="product-name">Макарун с манго</div>
+      <div class="product-quantity">
+        <div class="product-quantity-price">
+          <p>1 шт.</p>
+          <p>1,70 руб.</p>
+        </div>
+        <button class="btn product-btn">Заказать</button>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-image">
+        <img src="assets/images/whiteM.png" alt="White macaroon">
+      </div>
+      <div class="product-name">Пирог с ванилью</div>
+      <div class="product-quantity">
+        <div class="product-quantity-price">
+          <p>1 шт.</p>
+          <p>1,70 руб.</p>
+        </div>
+        <button class="btn product-btn">Заказать</button>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-image">
+        <img src="assets/images/greenM.png" alt="Green macaroon">
+      </div>
+      <div class="product-name">Пирог с фисташками</div>
+      <div class="product-quantity">
+        <div class="product-quantity-price">
+          <p>1 шт.</p>
+          <p>1,70 руб.</p>
+        </div>
+        <button class="btn product-btn">Заказать</button>
+      </div>
+    </div> -->
+  </div>
+</section>
+
+<section class="order" #orderSection>
+  <div class="container">
+    <div class="big-strawberry">
+      <img src="assets/images/strawberry.png" alt="Strawberry">
+    </div>
+    <div class="order-image">
+      <img src="assets/images/macaroons.png" alt="Macaroons">
+    </div>
+    <div class="order-form">
+      <div class="order-text">
+        <div class="order-text-title">Закажите макарун!</div>
+        <div class="order-text-message">
+          Выберите понравившийся макарун, заполните форму и ожидайте звонка нашего пекаря!
+        </div>
+      </div>
+      <div class="order-label">Ваш выбор</div>
+      <input type="text" class="order-input" placeholder="Напишите, что хотите заказать..."
+        [(ngModel)]="selectedProduct">
+      <div class="order-label">Заполните данные для заказа</div>
+      <input type="text" class="order-input" placeholder="Ваше имя">
+      <div><input type="tel" class="order-input" placeholder="+375 (__) ___ - __ - __"></div>
+      <button class="btn order-btn">Оформить заказ</button>
+    </div>
+    <div class="small-strawberry">
+      <img src="assets/images/strawberry small.png" alt="Strawberry">
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="block">
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="Logo">
+      </div>
+      <div class="footer-rights">Все права защищены, 2020</div>
+    </div>
+    <div class="footer-socials">
+      <!-- <img src="assets/images/insta.png" alt="Instagram"> -->
+      <a [href]="instagramLink" target="_blank">
+        <img [src]="'assets/images/' + instagramImage" alt="Instagram">
+      </a>
+    </div>
+    <div class="footer-contacts">{{phoneNumber}}</div>
+  </div>
+</footer>
+
+<div class="present" *ngIf="showPresent">
+  <div class="present-box">
+    <div class="present-text">
+      Оформите заказ и получите подарок!
+    </div>
+    <img src="assets/images/present.png" alt="Present">
+  </div>
+</div>
